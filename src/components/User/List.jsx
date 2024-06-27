@@ -1,23 +1,18 @@
 import React from 'react';
-// import  './Card';
 import './List.css';
-import Card from './Card'
+import Card from './Card';
 
-
-function List({ title,username, cards }){
-
-  
+const List = ({ title, users, onDelete, onUpdate }) => {
   return (
     <div className="list">
-      
+      <h3>{title}</h3>
       <div className="cards">
-        {cards.map((card,index)=>(
-          <Card key={index} text={card.text} />
+        {users.map((user, index) => (
+          <Card key={index} user={user} onDelete={onDelete} onUpdate={onUpdate} />
         ))}
       </div>
     </div>
   );
 };
-
 
 export default List;

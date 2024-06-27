@@ -1,16 +1,17 @@
 import React from 'react';
+import './List.css';
 
-const List = ({ title, username, cards = [] }) => {  // Provide a default empty array for cards
+const List = ({ task, onDelete, onUpdate, statuses }) => {
+  const taskStatus = statuses.find(status => status.pkid_status === task.fkid_status);
+
   return (
-    <div className="list">
-      <h3>{title}</h3>
-      <p>{username}</p>
-      <div className="cards">
-        {cards.map((card, index) => (
-          <div key={index} className="card">
-            {card}
-          </div>
-        ))}
+    <div className="task-card">
+      <h3>{task.name}</h3>
+      <p>{task.description}</p>
+      <p>Status: {taskStatus ? taskStatus.name : 'Unknown'}</p>
+      <div className="task-buttons">
+        <button className="task-button-edit" onClick={() => onUpdate(task)}>Edit</button>
+        <button className="task-button-delete" onClick={() => onDelete(task.pkid_task)}>Delete</button>
       </div>
     </div>
   );

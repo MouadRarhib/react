@@ -12,9 +12,8 @@ function Header(){
           <nav className="navigation">
             <ul>
               <li><a href="projects">Projects</a></li>
-              <li><a href="teams">Teams</a></li>
-              <li><a href="users">Users</a></li>
               <li><a href="tasks">Tasks</a></li>
+              <li><a href="users">Users</a></li>
             </ul>
           </nav>
           
@@ -22,9 +21,7 @@ function Header(){
               <div className="search-bar">
                       <input type="text" placeholder="Search..." />
               </div>
-           
           </div>
-        
     </header>
   );
 };

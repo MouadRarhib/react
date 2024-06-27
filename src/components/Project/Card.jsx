@@ -15,7 +15,7 @@ function Card({ name, created_at }) {
   return (
     <div className="card">
       <h2>{name}</h2>
-      <h4>Created at: {formattedDate}</h4>
+      <h4>Created at: {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(task.created_at))}</h4>
       <div className="card-buttons">
         <button className="card-button update">Update</button>
         <button className="card-button delete">Delete</button>
