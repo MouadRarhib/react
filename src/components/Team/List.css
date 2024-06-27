@@ -1,0 +1,31 @@
+/* src/List.css   */
+.list {
+    /* background-color: #dfe1e6;  */ 
+    padding: 10px;
+    border-radius: 3px;
+    width: 250px;
+    flex-shrink: 0;
+  }
+  
+  .list h3 {
+    margin-top: 0;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+
+  .list .title{
+    background-color: hsl(283, 38%, 66%); /* Red */
+    border-radius: 20px;
+    height: 60px;
+    width: 250px;
+  }
+
+  .list .title h3{
+    color: white;
+
+  }
